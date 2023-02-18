@@ -45,7 +45,10 @@ jobs:
 
 workflows:
   version: 2
-  branches: main
+  filters:
+    branches:
+      only:
+        - main
   django:
     jobs:
       - build
