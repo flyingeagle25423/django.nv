@@ -33,14 +33,6 @@ jobs:
     steps:
       - checkout
       - run: echo "This is a deploy step"
-      
- artifact:
-    docker:
-      - image: python:3.6
-    steps:
-      - run: echo "test" > test.txt
-      - store_artifacts:
-        path: test.txt
 
 workflows:
   version: 2
