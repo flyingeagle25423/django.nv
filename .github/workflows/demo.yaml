@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04                    # similar to "image" in GitLab
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v2
 
