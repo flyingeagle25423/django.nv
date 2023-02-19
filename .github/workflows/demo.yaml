@@ -24,7 +24,8 @@ jobs:
           pip install -r requirements.txt
           python manage.py check
           pip install bandit
-          bandit -r ./ -f json -o bandit.json
+          bandit -r ./ -f json -o bandit-scan.json
+          python3 upload.py --host dojo-f0q0gsbw.lab.practical-devsecops.training --api_key 12aa0066da885831772888a7c6698246c119b0cd --engagement_id 1 --product_id 1 --lead_id 1 --environment "Production" --result_file bandit-scan.json --scanner "Bandit Scan" # Scanner need to fit Test Types
 
 
   test:
